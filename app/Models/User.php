@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use Lravel\Passport\Contracts\Oauthienticatable;
 
-class User extends Authenticatable implements Oauthienticatable
+
+class User extends Authenticatable
 {
    
     use HasApiTokens, HasFactory, Notifiable;
@@ -17,6 +17,7 @@ class User extends Authenticatable implements Oauthienticatable
     /**
      * The attributes that are mass assignable.
      *
+     * PHPDoc（コメントでの型指定）
      * @var list<string>
      */
     protected $fillable = [
